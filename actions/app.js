@@ -18,15 +18,19 @@ roundScore = 0;
 activePlayer = 0; // 0 for player 1, 1 for player 2
 
 var diceFace = document.querySelector('.dice');
+var playerOneName = document.getElementById('name-0');
+var playerTwoName = document.getElementById('name-1');
 
 
-// DOM manipulation
-
-
-document.querySelector('#current-' + activePlayer).textContent;
-
+// Default DOM styling
 
 diceFace.style.display = 'none';
+
+document.getElementById('score-0').textContent = 0;
+document.getElementById('score-1').textContent = 0;
+document.getElementById('current-0').textContent = 0;
+document.getElementById('current-1').textContent = 0;
+
 
 // event handlers
 
@@ -39,7 +43,31 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     diceFace.style.display = 'block';
     diceFace.setAttribute('src', `../images/dice-${dice}.png`);
 
+    //update user interface based on rolldice button
+
+    if (dice !== 1) {
+        roundScore += dice;
+        document.querySelector(`#current-${activePlayer}`).textContent = roundScore;
+    } else {
+        roundScore = 0;
+        document.querySelector(`.player-${activePlayer}-panel`).classList.remove('active');
+
+
+        //conditional to change player
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+
+        //reset current holders to default 0
+        document.getElementById('current-0').textContent = 0;
+        document.getElementById('current-1').textContent = 0;
+
+        // add active class to change ui
+        document.querySelector(`.player-${activePlayer}-panel`).classList.toggle('active');
+
+        //hide dice again to give user feedback
+        diceFace.style.display = 'none';
+    }
 } );
+
 
 // functions
 
