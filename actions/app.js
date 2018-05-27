@@ -37,7 +37,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
     //display dice result
     diceFace.style.display = 'block';
-    diceFace.setAttribute('src', `dice-${dice}.png`);
+    diceFace.setAttribute('src', `../images/dice-${dice}.png`);
 
 } );
 
