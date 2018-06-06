@@ -135,6 +135,7 @@ function newGame() {
             ` add div around buttons (roll and hold) and reposition to work in both layouts.
             ` Test different layouts for mobile (maybe layer style with z index)
             ` add name changing
+            ` Allow players to define what score to play up to
     
 */
 
