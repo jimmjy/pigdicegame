@@ -12,3 +12,5 @@ GAME RULES:
 - The player can choose to 'Hold', which means that his current score gets added to his global score. 
 - After that, it's the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game
+
+playable link: https://jimmjy.github.io/pigdicegame/
