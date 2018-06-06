@@ -28,7 +28,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
     //display dice result
     diceFace.style.display = 'block';
-    diceFace.src = `blah.jpg`//`images/dice-${dice}.png`;
+    diceFace.src = `images/dice-${dice}.png`;
 
     //update user interface based on rolldice button
 
