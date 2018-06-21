@@ -114,7 +114,7 @@ function newGame() {
 
     //default names
     document.getElementById('name-0').textContent = 'Player1';
-    document.getElementById('name-1').textContent = 'Player1';
+    document.getElementById('name-1').textContent = 'Player2';
 
     //default styling for player 1 to be active right away
     document.querySelector('.player-0-panel').classList.add('active');
